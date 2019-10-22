@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. 安装CircuitPython &mdash; Python for Circle 1.0.0 文档</title>
+  <title>3. 安装CircuitPython &mdash; Python for Circle 1.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -34,10 +33,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="3. CIRCUITPY磁盘" href="the_circuitpy_drive.html" />
-    <link rel="prev" title="1. 安装Mu" href="install_mu.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. CIRCUITPY磁盘" href="the_circuitpy_drive.html" />
+    <link rel="prev" title="2. 安装Mu" href="install_mu.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,17 +82,22 @@
             
               <p class="caption"><span class="caption-text">快速开始</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install_mu.html">1. 安装Mu</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. 安装CircuitPython</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 编程圆模式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2.2. 安装或升级CircuitPython固件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bootloader">2.3. 升级Bootloader固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="circle_intro.html">1. 编程圆简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mu.html">2. 安装Mu</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 安装CircuitPython</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. 编程圆模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.2. 安装或升级CircuitPython固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bootloader">3.3. 升级Bootloader固件</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. CIRCUITPY磁盘</a></li>
-<li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">4. 创建和编辑Python代码</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">5. 串口控制台交互</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_repl.html">6. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">4. CIRCUITPY磁盘</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">5. 创建和编辑Python代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_repl.html">7. REPL</a></li>
+</ul>
+<p class="caption"><span class="caption-text">核心模块</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreModules/core_overview.html">1. 简介</a></li>
 </ul>
 
             
@@ -139,7 +143,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>2. 安装CircuitPython</li>
+      <li>3. 安装CircuitPython</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,9 +163,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="circuitpython">
-<span id="install-circuitpython"></span><h1>2. 安装CircuitPython<a class="headerlink" href="#circuitpython" title="永久链接至标题">¶</a></h1>
+<span id="install-circuitpython"></span><h1>3. 安装CircuitPython<a class="headerlink" href="#circuitpython" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>2.1. 编程圆模式<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>3.1. 编程圆模式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>编程圆支持MakceCode模式和CircuitPython模式，另外还有一个Bootlooder模式。
 将编程圆通过USB插上电脑，当磁盘名称为CPXR1BOOT时，即为Bootloader模式。</p>
 <img alt="../_images/cpxr1boot_drive.png" src="../_images/cpxr1boot_drive.png" />
@@ -171,18 +175,18 @@
 双击切换成Bootloader模式。</p>
 </div>
 <div class="section" id="id2">
-<h2>2.2. 安装或升级CircuitPython固件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>3.2. 安装或升级CircuitPython固件<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>如果编程圆未安装有CircuitPython固件或需要升级CircuitPython固件版本，可以通过Bootloader模式（即磁盘名称为“CPXR1BOOT”时），下载CircuitPython.uf2固件并拖到该磁盘即可。</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p><a class="reference external" href="http://www.hibottoy.com:8080/static/install/pc/windows/HiiBotCircle/circuitpython.uf2">CircuitPython下载</a></p>
 </div>
 </div>
 <div class="section" id="bootloader">
-<h2>2.3. 升级Bootloader固件<a class="headerlink" href="#bootloader" title="永久链接至标题">¶</a></h2>
+<h2>3.3. 升级Bootloader固件<a class="headerlink" href="#bootloader" title="Permalink to this headline">¶</a></h2>
 <p>如果有必要更新Bootloader固件，可以通过Bootloader模式，下载“cpxr1_bootloader.uf2”固件并拖到该磁盘就可完成升级</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p><a class="reference external" href="http://www.hibottoy.com:8080/static/install/pc/windows/HiiBotCircle/cpxr1_bootloader.uf2">cpxr1_bootloader下载</a></p>
 </div>
 </div>
@@ -196,10 +200,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="the_circuitpy_drive.html" class="btn btn-neutral float-right" title="3. CIRCUITPY磁盘" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="the_circuitpy_drive.html" class="btn btn-neutral float-right" title="4. CIRCUITPY磁盘" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install_mu.html" class="btn btn-neutral float-left" title="1. 安装Mu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install_mu.html" class="btn btn-neutral float-left" title="2. 安装Mu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

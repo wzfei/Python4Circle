@@ -3,6 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _topics-index:
+
+=============================================
 Welcome to Python for Circle's documentation!
 =============================================
 
@@ -14,6 +17,7 @@ Welcome to Python for Circle's documentation!
     :caption: 快速开始
     :numbered:
 
+    intro/circle_intro
     intro/install_mu
     intro/install_circuitPython
     intro/the_circuitpy_drive
@@ -21,9 +25,8 @@ Welcome to Python for Circle's documentation!
     intro/interacting_with_the_serial_console
     intro/the_repl
 
-Indices and tables
-==================
+.. toctree::
+    :caption: 核心模块
+    :numbered:
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    coreModules/core_overview

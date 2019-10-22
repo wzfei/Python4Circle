@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Python for Circle’s documentation! &mdash; Python for Circle 1.0.0 文档</title>
+  <title>Welcome to Python for Circle’s documentation! &mdash; Python for Circle 1.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,9 +33,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="1. 安装Mu" href="intro/install_mu.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. 编程圆简介" href="intro/circle_intro.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,12 +81,17 @@
             
               <p class="caption"><span class="caption-text">快速开始</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro/install_mu.html">1. 安装Mu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro/install_circuitPython.html">2. 安装CircuitPython</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro/the_circuitpy_drive.html">3. CIRCUITPY磁盘</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro/create_editing_code.html">4. 创建和编辑Python代码</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro/interacting_with_the_serial_console.html">5. 串口控制台交互</a></li>
-<li class="toctree-l1"><a class="reference internal" href="intro/the_repl.html">6. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/circle_intro.html">1. 编程圆简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install_mu.html">2. 安装Mu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install_circuitPython.html">3. 安装CircuitPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/the_circuitpy_drive.html">4. CIRCUITPY磁盘</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/create_editing_code.html">5. 创建和编辑Python代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/the_repl.html">7. REPL</a></li>
+</ul>
+<p class="caption"><span class="caption-text">核心模块</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coreModules/core_overview.html">1. 简介</a></li>
 </ul>
 
             
@@ -153,49 +157,48 @@
            <div itemprop="articleBody">
             
   <div class="section" id="welcome-to-python-for-circle-s-documentation">
-<h1>Welcome to Python for Circle’s documentation!<a class="headerlink" href="#welcome-to-python-for-circle-s-documentation" title="永久链接至标题">¶</a></h1>
+<span id="topics-index"></span><h1>Welcome to Python for Circle’s documentation!<a class="headerlink" href="#welcome-to-python-for-circle-s-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">快速开始</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="intro/install_mu.html">1. 安装Mu</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro/install_mu.html#id1">1.1. 下载Mu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro/install_mu.html#id3">1.2. Mu的使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/circle_intro.html">1. 编程圆简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install_mu.html">2. 安装Mu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/install_mu.html#id1">2.1. 下载Mu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/install_mu.html#id3">2.2. Mu的使用</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro/install_circuitPython.html">2. 安装CircuitPython</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro/install_circuitPython.html#id1">2.1. 编程圆模式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro/install_circuitPython.html#id2">2.2. 安装或升级CircuitPython固件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro/install_circuitPython.html#bootloader">2.3. 升级Bootloader固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/install_circuitPython.html">3. 安装CircuitPython</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/install_circuitPython.html#id1">3.1. 编程圆模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/install_circuitPython.html#id2">3.2. 安装或升级CircuitPython固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/install_circuitPython.html#bootloader">3.3. 升级Bootloader固件</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro/the_circuitpy_drive.html">3. CIRCUITPY磁盘</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro/the_circuitpy_drive.html#id1">3.1. 磁盘文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro/the_circuitpy_drive.html#id2">3.2. 磁盘重命名</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/the_circuitpy_drive.html">4. CIRCUITPY磁盘</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/the_circuitpy_drive.html#id1">4.1. 磁盘文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/the_circuitpy_drive.html#id2">4.2. 磁盘重命名</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro/create_editing_code.html">4. 创建和编辑Python代码</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro/create_editing_code.html#id1">4.1. 创建代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro/create_editing_code.html#id2">4.2. 编辑代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/create_editing_code.html">5. 创建和编辑Python代码</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/create_editing_code.html#id1">5.1. 创建代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/create_editing_code.html#id2">5.2. 编辑代码</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro/interacting_with_the_serial_console.html">5. 串口控制台交互</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro/interacting_with_the_serial_console.html#id2">5.1. 串口控制台</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro/interacting_with_the_serial_console.html#mu">5.2. Mu串口控制台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/interacting_with_the_serial_console.html">6. 串口控制台交互</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/interacting_with_the_serial_console.html#id2">6.1. 串口控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/interacting_with_the_serial_console.html#mu">6.2. Mu串口控制台</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="intro/the_repl.html">6. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/the_repl.html">7. REPL</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="永久链接至标题">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">搜索页面</span></a></p></li>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">核心模块</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="coreModules/core_overview.html">1. 简介</a></li>
 </ul>
+</div>
 </div>
 
 
@@ -206,7 +209,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="intro/install_mu.html" class="btn btn-neutral float-right" title="1. 安装Mu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="intro/circle_intro.html" class="btn btn-neutral float-right" title="1. 编程圆简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. 创建和编辑Python代码 &mdash; Python for Circle 1.0.0 文档</title>
+  <title>5. 创建和编辑Python代码 &mdash; Python for Circle 1.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -34,10 +33,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="5. 串口控制台交互" href="interacting_with_the_serial_console.html" />
-    <link rel="prev" title="3. CIRCUITPY磁盘" href="the_circuitpy_drive.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. 串口控制台交互" href="interacting_with_the_serial_console.html" />
+    <link rel="prev" title="4. CIRCUITPY磁盘" href="the_circuitpy_drive.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,16 +82,21 @@
             
               <p class="caption"><span class="caption-text">快速开始</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install_mu.html">1. 安装Mu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">2. 安装CircuitPython</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. CIRCUITPY磁盘</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. 创建和编辑Python代码</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">4.1. 创建代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">4.2. 编辑代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="circle_intro.html">1. 编程圆简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mu.html">2. 安装Mu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">3. 安装CircuitPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">4. CIRCUITPY磁盘</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. 创建和编辑Python代码</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">5.1. 创建代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">5.2. 编辑代码</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">5. 串口控制台交互</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_repl.html">6. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_repl.html">7. REPL</a></li>
+</ul>
+<p class="caption"><span class="caption-text">核心模块</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreModules/core_overview.html">1. 简介</a></li>
 </ul>
 
             
@@ -138,7 +142,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>4. 创建和编辑Python代码</li>
+      <li>5. 创建和编辑Python代码</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,10 +162,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="python">
-<span id="create-editing-code"></span><h1>4. 创建和编辑Python代码<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h1>
+<span id="create-editing-code"></span><h1>5. 创建和编辑Python代码<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
 <p>可以用很多文本编辑工具编写python代码，比如系统自带的记事本、<a class="reference external" href="https://notepad-plus-plus.org">Notepad</a> 等。我们建议使用Mu。Mu支持CircuitPython，并集成了串口控制台，使用简单方便。</p>
 <div class="section" id="id1">
-<h2>4.1. 创建代码<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>5.1. 创建代码<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>打开Mu工具，点击左上角“新建”按钮创建一个文件。</p>
 <img alt="../_images/code_new.png" src="../_images/code_new.png" />
 <p>拷贝并黏贴以下代码到Mu代码编辑窗口</p>
@@ -191,7 +195,7 @@
 </pre></div>
 </td></tr></table></div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>需要注意while True以下的四行需要缩进对齐</p>
 </div>
 <img alt="../_images/code_new1.png" src="../_images/code_new1.png" />
@@ -202,12 +206,12 @@
 恭喜你在编程圆上成功运行了第一个Python程序。</p>
 </div>
 <div class="section" id="id2">
-<h2>4.2. 编辑代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>5.2. 编辑代码<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>修改或再次编辑编程圆上的Python程序，点击“加载”按钮，加载CIRCUITPY磁盘上的“code.py”进行修改。</p>
 <img alt="../_images/code_load.png" src="../_images/code_load.png" />
 <p>根据需求修改完可直接保存生效。一旦“code.py”修改并保存了，程序能重新自动启动运行。</p>
 <div class="admonition warning">
-<p class="admonition-title">警告</p>
+<p class="admonition-title">Warning</p>
 <p>不需要拔除USB或者按“reset”按钮，修改完程序保存就能自动运行。</p>
 </div>
 <p>编程圆会自动检测文件是否修改更新，并自动重启代码。</p>
@@ -222,10 +226,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="interacting_with_the_serial_console.html" class="btn btn-neutral float-right" title="5. 串口控制台交互" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interacting_with_the_serial_console.html" class="btn btn-neutral float-right" title="6. 串口控制台交互" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="the_circuitpy_drive.html" class="btn btn-neutral float-left" title="3. CIRCUITPY磁盘" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="the_circuitpy_drive.html" class="btn btn-neutral float-left" title="4. CIRCUITPY磁盘" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

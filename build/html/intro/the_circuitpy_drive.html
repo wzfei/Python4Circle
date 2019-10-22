@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. CIRCUITPY磁盘 &mdash; Python for Circle 1.0.0 文档</title>
+  <title>4. CIRCUITPY磁盘 &mdash; Python for Circle 1.0.0 documentation</title>
   
 
   
@@ -25,7 +25,6 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -34,10 +33,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="4. 创建和编辑Python代码" href="create_editing_code.html" />
-    <link rel="prev" title="2. 安装CircuitPython" href="install_circuitPython.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. 创建和编辑Python代码" href="create_editing_code.html" />
+    <link rel="prev" title="3. 安装CircuitPython" href="install_circuitPython.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,16 +82,21 @@
             
               <p class="caption"><span class="caption-text">快速开始</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install_mu.html">1. 安装Mu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">2. 安装CircuitPython</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. CIRCUITPY磁盘</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. 磁盘文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">3.2. 磁盘重命名</a></li>
+<li class="toctree-l1"><a class="reference internal" href="circle_intro.html">1. 编程圆简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mu.html">2. 安装Mu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">3. 安装CircuitPython</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. CIRCUITPY磁盘</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">4.1. 磁盘文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.2. 磁盘重命名</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">4. 创建和编辑Python代码</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">5. 串口控制台交互</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_repl.html">6. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">5. 创建和编辑Python代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_repl.html">7. REPL</a></li>
+</ul>
+<p class="caption"><span class="caption-text">核心模块</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../coreModules/core_overview.html">1. 简介</a></li>
 </ul>
 
             
@@ -138,7 +142,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>3. CIRCUITPY磁盘</li>
+      <li>4. CIRCUITPY磁盘</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,20 +162,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="circuitpy">
-<span id="the-circuitpy-drive"></span><h1>3. CIRCUITPY磁盘<a class="headerlink" href="#circuitpy" title="永久链接至标题">¶</a></h1>
+<span id="the-circuitpy-drive"></span><h1>4. CIRCUITPY磁盘<a class="headerlink" href="#circuitpy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>3.1. 磁盘文件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>4.1. 磁盘文件<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>如果编程圆已经正常安装了CircuitPython固件后，插入到电脑时就会出现名为“CIRCUITPY”磁盘。</p>
 <img alt="../_images/circuitpy_drive.png" src="../_images/circuitpy_drive.png" />
 <p>“CIRCUITPY”磁盘包含了代码文件和需要的库文件，可以直接编辑代码文件并保存就能自动执行最新修改的代码。当然编辑的代码需要保存在名为“code.py”的文件中。</p>
 <img alt="../_images/circuitpy_drive_file.png" src="../_images/circuitpy_drive_file.png" />
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>如果磁盘中没有“code.py”文件，可以自行创建一个这样的文件名即可。</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h2>3.2. 磁盘重命名<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>4.2. 磁盘重命名<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>当我们需要多个编程圆同时插在电脑上的时候，可能会涉及的重名的问题，因为磁盘名称默认都是“CIRCUITPY”，那就需要对不同的磁盘修改名称来区分。</p>
 <img alt="../_images/rename_drive_win.png" src="../_images/rename_drive_win.png" />
 <img alt="../_images/rename_drive_win1.png" src="../_images/rename_drive_win1.png" />
@@ -186,10 +190,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="create_editing_code.html" class="btn btn-neutral float-right" title="4. 创建和编辑Python代码" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="create_editing_code.html" class="btn btn-neutral float-right" title="5. 创建和编辑Python代码" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install_circuitPython.html" class="btn btn-neutral float-left" title="2. 安装CircuitPython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install_circuitPython.html" class="btn btn-neutral float-left" title="3. 安装CircuitPython" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

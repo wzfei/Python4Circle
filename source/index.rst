@@ -17,9 +17,16 @@ Welcome to Python for Circle's documentation!
     :caption: 快速开始
     :numbered:
 
+    intro/circle_intro
     intro/install_mu
     intro/install_circuitPython
     intro/the_circuitpy_drive
     intro/create_editing_code
     intro/interacting_with_the_serial_console
     intro/the_repl
+
+.. toctree::
+    :caption: 核心模块
+    :numbered:
+
+    coreModules/core_overview
