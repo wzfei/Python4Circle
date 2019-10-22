@@ -62,9 +62,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 #pdf zh_CN
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-if on_rtd:
-    latex_elements = {
+latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #'papersize': 'letterpaper',
     # The font size ('10pt', '11pt' or '12pt').
@@ -86,14 +84,4 @@ if on_rtd:
     \begin{CJK}{UTF8}{gbsn}
     \AtEndDocument{\end{CJK}}
     ''',
-    }
-else:
-    latex_elements = {
-        'papersize' : 'a4paper',
-        'utf8extra' : '',
-        'inputenc'  : '',
-        'babel'     : r'''\usepackage[english]{babel}''',
-        'preamble' : r'''
-        \usepackage{ctex}
-        ''',
     }
