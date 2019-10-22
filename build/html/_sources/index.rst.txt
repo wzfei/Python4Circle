@@ -10,12 +10,16 @@ Welcome to Python for Circle's documentation!
    :maxdepth: 1
    :caption: API and Usage
 
-
 .. toctree::
-   :maxdepth: 2
+    :caption: 快速开始
+    :numbered:
 
-   getting_started.rst
-
+    intro/install_mu
+    intro/install_circuitPython
+    intro/the_circuitpy_drive
+    intro/create_editing_code
+    intro/interacting_with_the_serial_console
+    intro/the_repl
 
 Indices and tables
 ==================

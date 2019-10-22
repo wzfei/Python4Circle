@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7. REPL &mdash; Python for Circle 1.0.0 文档</title>
+  <title>6. REPL &mdash; Python for Circle 1.0.0 文档</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="prev" title="6. 串口控制台交互" href="interacting_with_the_serial_console.html" /> 
+    <link rel="prev" title="5. 串口控制台交互" href="interacting_with_the_serial_console.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,11 +84,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install_mu.html">1. 安装Mu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">2. 安装CircuitPython</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. 安装驱动</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. CIRCUITPY磁盘</a></li>
 <li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">4. 创建和编辑Python代码</a></li>
-<li class="toctree-l1"><a class="reference internal" href="connecting_to_the_serial_console.html">5. 连接串口控制台</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">5. 串口控制台交互</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. REPL</a></li>
 </ul>
 
             
@@ -134,7 +133,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>7. REPL</li>
+      <li>6. REPL</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,7 +153,34 @@
            <div itemprop="articleBody">
             
   <div class="section" id="repl">
-<span id="the-repl"></span><h1>7. REPL<a class="headerlink" href="#repl" title="永久链接至标题">¶</a></h1>
+<span id="the-repl"></span><h1>6. REPL<a class="headerlink" href="#repl" title="永久链接至标题">¶</a></h1>
+<p>REPL（Read-Evaluate-Print-Loop） — 交互式解释器环境。
+输入值，交互式解释器会读取输入内容并对它求值，再返回结果，并重复此过程。</p>
+<p>REPL可以立即执行当前输入的代码，可以实时的运行并输出结果。通常REPL交互方式可以用于调试、测试以及试验某种想法。</p>
+<p>Mu中的串口窗口可以连接上编程圆的REPL环境，由于编程圆中当前运行的while循环会造成阻塞并影响Mu串口连接编程圆的REPL环境，
+所以需要先将编程圆上的while循环语句去除。可以加载“code.py”文件，删除所有代码并保存。</p>
+<img alt="../_images/repl_open.png" src="../_images/repl_open.png" />
+<p>输入打印代码并回车，将会直接输出打印信息。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<span class="go">Hello, world!</span>
+</pre></div>
+</div>
+<img alt="../_images/repl_print1.png" src="../_images/repl_print1.png" />
+<p>我们输入设置亮灯的程序，编程圆上红灯保持着常量状态。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">board</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">digitalio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">led</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">D13</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">led</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">Direction</span><span class="o">.</span><span class="n">OUTPUT</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">led</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<img alt="../_images/repl_led1.png" src="../_images/repl_led1.png" />
+<p>将led.value设置为False，编程圆上的红灯将熄灭</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">led</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<img alt="../_images/repl_led2.png" src="../_images/repl_led2.png" />
 </div>
 
 
@@ -166,7 +192,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="interacting_with_the_serial_console.html" class="btn btn-neutral float-left" title="6. 串口控制台交互" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="interacting_with_the_serial_console.html" class="btn btn-neutral float-left" title="5. 串口控制台交互" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

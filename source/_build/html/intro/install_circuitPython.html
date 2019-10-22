@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="3. CIRCUITPY磁盘" href="the_circuitpy_drive.html" />
     <link rel="prev" title="1. 安装Mu" href="install_mu.html" /> 
 </head>
 
@@ -83,7 +84,16 @@
               <p class="caption"><span class="caption-text">快速开始</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install_mu.html">1. 安装Mu</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. 安装CircuitPython</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. 安装CircuitPython</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 编程圆模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.2. 安装或升级CircuitPython固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bootloader">2.3. 升级Bootloader固件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. CIRCUITPY磁盘</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">4. 创建和编辑Python代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">5. 串口控制台交互</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_repl.html">6. REPL</a></li>
 </ul>
 
             
@@ -150,6 +160,32 @@
             
   <div class="section" id="circuitpython">
 <span id="install-circuitpython"></span><h1>2. 安装CircuitPython<a class="headerlink" href="#circuitpython" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>2.1. 编程圆模式<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>编程圆支持MakceCode模式和CircuitPython模式，另外还有一个Bootlooder模式。
+将编程圆通过USB插上电脑，当磁盘名称为CPXR1BOOT时，即为Bootloader模式。</p>
+<img alt="../_images/cpxr1boot_drive.png" src="../_images/cpxr1boot_drive.png" />
+<p>当磁盘名称为CIRCUITPY时，为CircuitPython模式，也就是我们使用Python编程模式。</p>
+<img alt="../_images/circuitpy_drive.png" src="../_images/circuitpy_drive.png" />
+<p>如果编程圆已经安装有CircuitPython固件，那么可以通过编程圆reset按钮来切换Bootlooder模式和CircuitPython模式，单击切换成CircuitPython模式或者重启运行Python程序，
+双击切换成Bootloader模式。</p>
+</div>
+<div class="section" id="id2">
+<h2>2.2. 安装或升级CircuitPython固件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>如果编程圆未安装有CircuitPython固件或需要升级CircuitPython固件版本，可以通过Bootloader模式（即磁盘名称为“CPXR1BOOT”时），下载CircuitPython.uf2固件并拖到该磁盘即可。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><a class="reference external" href="http://www.hibottoy.com:8080/static/install/pc/windows/HiiBotCircle/circuitpython.uf2">CircuitPython下载</a></p>
+</div>
+</div>
+<div class="section" id="bootloader">
+<h2>2.3. 升级Bootloader固件<a class="headerlink" href="#bootloader" title="永久链接至标题">¶</a></h2>
+<p>如果有必要更新Bootloader固件，可以通过Bootloader模式，下载“cpxr1_bootloader.uf2”固件并拖到该磁盘就可完成升级</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><a class="reference external" href="http://www.hibottoy.com:8080/static/install/pc/windows/HiiBotCircle/cpxr1_bootloader.uf2">cpxr1_bootloader下载</a></p>
+</div>
+</div>
 </div>
 
 
@@ -159,6 +195,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="the_circuitpy_drive.html" class="btn btn-neutral float-right" title="3. CIRCUITPY磁盘" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="install_mu.html" class="btn btn-neutral float-left" title="1. 安装Mu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

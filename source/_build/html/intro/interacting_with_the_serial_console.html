@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. 串口控制台交互 &mdash; Python for Circle 1.0.0 文档</title>
+  <title>5. 串口控制台交互 &mdash; Python for Circle 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="7. REPL" href="the_repl.html" />
-    <link rel="prev" title="5. 连接串口控制台" href="connecting_to_the_serial_console.html" /> 
+    <link rel="next" title="6. REPL" href="the_repl.html" />
+    <link rel="prev" title="4. 创建和编辑Python代码" href="create_editing_code.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,11 +85,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install_mu.html">1. 安装Mu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">2. 安装CircuitPython</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. 安装驱动</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">3. CIRCUITPY磁盘</a></li>
 <li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">4. 创建和编辑Python代码</a></li>
-<li class="toctree-l1"><a class="reference internal" href="connecting_to_the_serial_console.html">5. 连接串口控制台</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. 串口控制台交互</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_repl.html">7. REPL</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. 串口控制台交互</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">5.1. 串口控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mu">5.2. Mu串口控制台</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="the_repl.html">6. REPL</a></li>
 </ul>
 
             
@@ -135,7 +138,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>6. 串口控制台交互</li>
+      <li>5. 串口控制台交互</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,7 +158,60 @@
            <div itemprop="articleBody">
             
   <div class="section" id="interacting-with-the-serial-console">
-<span id="id1"></span><h1>6. 串口控制台交互<a class="headerlink" href="#interacting-with-the-serial-console" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1>5. 串口控制台交互<a class="headerlink" href="#interacting-with-the-serial-console" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>5.1. 串口控制台<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>编写程序的时候通常会需要输出程序运行中的一些信息，常用的就是print方法，CircuitPython也具备这功能。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这行代码的执行结果就是打印输出“Hello, world!”</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+<p>然而这些打印输出的信息需要有地方呈现，这就是串口控制台的作用了，可以呈现打印输出的信息。
+串口控制台通过USB接收编程圆的输出信息并呈现打印信息。所以只要将编程圆通过USB插上电脑就行。</p>
+</div>
+<div class="section" id="mu">
+<h2>5.2. Mu串口控制台<a class="headerlink" href="#mu" title="永久链接至标题">¶</a></h2>
+<p>我们可以通过电脑的控制台去连接编程圆的串口输出，也可以使用Mu自带的串口连接编程圆的串口输出。我们建议使用Mu，因为简单方便。</p>
+<p>首先我们修改编程圆上的闪灯代码，加入print功能，输出打印一些信息。可以拷贝一下代码并保存。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">board</span>
+<span class="kn">import</span> <span class="nn">digitalio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">led</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">D13</span><span class="p">)</span>
+<span class="n">led</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">Direction</span><span class="o">.</span><span class="n">OUTPUT</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello, HiiBot Circle!&quot;</span><span class="p">)</span>
+   <span class="n">led</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">True</span>
+   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">led</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">False</span>
+   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/serial_console.png" src="../_images/serial_console.png" />
+<p>在Mu下方多出一个控制台窗口，编程圆的打印输出信息都在控制台窗口呈现。</p>
+<img alt="../_images/serial_console_out1.png" src="../_images/serial_console_out1.png" />
+<p>可以尝试修改输出信息，保存后查看新的输出信息。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">board</span>
+<span class="kn">import</span> <span class="nn">digitalio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">led</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">D13</span><span class="p">)</span>
+<span class="n">led</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">Direction</span><span class="o">.</span><span class="n">OUTPUT</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello back to you！&quot;</span><span class="p">)</span>
+   <span class="n">led</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">True</span>
+   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">led</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="bp">False</span>
+   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/serial_console_out2.png" src="../_images/serial_console_out2.png" />
+</div>
 </div>
 
 
@@ -166,10 +222,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="the_repl.html" class="btn btn-neutral float-right" title="7. REPL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="the_repl.html" class="btn btn-neutral float-right" title="6. REPL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="connecting_to_the_serial_console.html" class="btn btn-neutral float-left" title="5. 连接串口控制台" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="create_editing_code.html" class="btn btn-neutral float-left" title="4. 创建和编辑Python代码" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -18,7 +18,6 @@ Welcome to Python for Circle's documentation!
     intro/install_circuitPython
     intro/the_circuitpy_drive
     intro/create_editing_code
-    intro/connecting_to_the_serial_console
     intro/interacting_with_the_serial_console
     intro/the_repl
 
