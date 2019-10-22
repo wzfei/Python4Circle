@@ -23,10 +23,3 @@ Welcome to Python for Circle's documentation!
     intro/create_editing_code
     intro/interacting_with_the_serial_console
     intro/the_repl
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
