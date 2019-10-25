@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. 编程圆简介 &mdash; Python for Circle 1.0.0 documentation</title>
+  <title>3. 按钮 &mdash; Python for Circle 1.0.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. 安装Mu" href="install_mu.html" />
-    <link rel="prev" title="Welcome to Python for Circle’s documentation!" href="../index.html" /> 
+    <link rel="next" title="1. 简介" href="../coreModules/core_overview.html" />
+    <link rel="prev" title="2. 红灯" href="circle_red_led.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,14 +81,20 @@
             
             
               <p class="caption"><span class="caption-text">快速开始</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/circle_intro.html">1. 编程圆简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install_mu.html">2. 安装Mu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/install_circuitPython.html">3. 安装CircuitPython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/the_circuitpy_drive.html">4. CIRCUITPY磁盘</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/create_editing_code.html">5. 创建和编辑Python代码</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/the_repl.html">7. REPL</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HiiBot Circle 模块</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 编程圆简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_mu.html">2. 安装Mu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_circuitPython.html">3. 安装CircuitPython</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_circuitpy_drive.html">4. CIRCUITPY磁盘</a></li>
-<li class="toctree-l1"><a class="reference internal" href="create_editing_code.html">5. 创建和编辑Python代码</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interacting_with_the_serial_console.html">6. 串口控制台交互</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_repl.html">7. REPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="circle_intro.html">1. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="circle_red_led.html">2. 红灯</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 按钮</a></li>
 </ul>
 <p class="caption"><span class="caption-text">核心模块</span></p>
 <ul>
@@ -138,13 +144,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>1. 编程圆简介</li>
+      <li>3. 按钮</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/intro/circle_intro.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/circle/circle_btn.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,11 +163,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="circle-intro">
-<span id="id1"></span><h1>1. 编程圆简介<a class="headerlink" href="#circle-intro" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/circle.gif" src="../_images/circle.gif" />
-<img alt="../_images/circle_works.png" src="../_images/circle_works.png" />
-<img alt="../_images/hardware_view.png" src="../_images/hardware_view.png" />
+  <div class="section" id="circle-btn">
+<span id="id1"></span><h1>3. 按钮<a class="headerlink" href="#circle-btn" title="Permalink to this headline">¶</a></h1>
+<p>HiiBot Circle具有2个按钮：按钮A和按钮B，分别对应button_a和button_b。</p>
+<p>当按钮A被按下时，则hbc.button_a为True，否则为False。按钮B同理。</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hiibot_circle</span> <span class="kn">import</span> <span class="n">hbc</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+   <span class="k">if</span> <span class="n">hbc</span><span class="o">.</span><span class="n">button_a</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Button A pressed!&quot;</span><span class="p">)</span>
+      <span class="n">hbc</span><span class="o">.</span><span class="n">red_led</span> <span class="o">=</span> <span class="bp">True</span>
+   <span class="k">if</span> <span class="n">hbc</span><span class="o">.</span><span class="n">button_b</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Button B pressed!&quot;</span><span class="p">)</span>
+      <span class="n">hbc</span><span class="o">.</span><span class="n">red_led</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</td></tr></table></div>
+<p>示例在while循环中，检测按钮A是否按下，如果按下了打印输出并控制红灯(red_led)亮；
+检测按钮B是否按下，如果按下了打印输出并控制红灯灭。</p>
 </div>
 
 
@@ -172,10 +198,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="install_mu.html" class="btn btn-neutral float-right" title="2. 安装Mu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../coreModules/core_overview.html" class="btn btn-neutral float-right" title="1. 简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Python for Circle’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="circle_red_led.html" class="btn btn-neutral float-left" title="2. 红灯" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

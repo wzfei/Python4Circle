@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. _topics-index:
-
+w
 =============================================
 Welcome to Python for Circle's documentation!
 =============================================
@@ -24,6 +24,14 @@ Welcome to Python for Circle's documentation!
     intro/create_editing_code
     intro/interacting_with_the_serial_console
     intro/the_repl
+
+.. toctree::
+    :caption: HiiBot Circle 模块
+    :numbered:
+
+    circle/circle_intro
+    circle/circle_red_led
+    circle/circle_btn
 
 .. toctree::
     :caption: 核心模块
