@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. _topics-index:
-
+w
 =============================================
 Welcome to Python for Circle's documentation!
 =============================================
